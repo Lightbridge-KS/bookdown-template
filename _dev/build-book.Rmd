@@ -1,0 +1,25 @@
+---
+title: "build book"
+author: "kittipos sirivongrungson"
+date: "2/20/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_knit$set(root.dir = rprojroot::find_rstudio_root_file()) # Set WD to Root
+here::i_am("_dev/build-book.Rmd")
+library(here)
+
+```
+
+## Create Book
+
+[bookdown Ref](https://pkgs.rstudio.com/bookdown/index.html)
+
+```{r}
+create_bs4_book(here("."))
+```
+
+`_bookdown.yml`: see config [here](https://bookdown.org/yihui/bookdown/configuration.html)
+
+`_output.yml`: for render multiple outputs
